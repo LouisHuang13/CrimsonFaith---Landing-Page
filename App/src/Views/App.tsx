@@ -29,7 +29,17 @@ export const App = () => {
         </div>
       </div>
     </section>
-    
+    <section id="storySection">
+      <div className="Gradient"></div>
+      <div>
+        <span>Story</span>
+        <div>
+          <h2>Every <b>Flesh</b> has memory.</h2>
+          <p>A city that never sees the sun. A place built from forgotten memories. Ancient ruins and that things that should have remained asleep.</p>
+        </div>
+      </div>
+    </section>
+    <Footer/>
     </>
   )
 }
