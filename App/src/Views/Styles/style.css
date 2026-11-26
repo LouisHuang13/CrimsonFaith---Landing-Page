@@ -1,0 +1,74 @@
+html, body {
+    padding: 0; margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'MD';
+    src: url(../../Assets/Fonts/MaziusDisplay.otf);
+}
+@font-face {
+    font-family: 'Aktura';
+    src: url(../../Assets/Fonts/Aktura.otf);
+}
+
+:root {
+    /* Colors */
+    --Bright: #9D3335;
+    --Blue: #180684;
+    --Dark: #20060B;
+    --White: #EFEFEF;
+
+    /* Gradient(s) */
+    --mainGradient: linear-gradient(180deg, var(--Dark) -75%, #00000000 100%);
+
+    interpolate-size: allow-keywords;
+}
+
+a {
+    color: inherit; text-decoration: none;
+}
+
+nav {
+    width: 100%; height: fit-content;
+    padding: 1% 15%; 
+    
+    position: fixed; top: 0;
+
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--mainGradient);
+    
+    font-family: 'Aktura';
+
+    > img {
+        width: 7.5%;
+    }
+    > div {
+        width: fit-content;
+        display: flex; justify-content: space-between; align-items: center; gap: 10%;
+        color: var(--White); font-size: 1.3rem;
+    }
+    > div:last-of-type {
+        width: fit-content;
+        display: flex; justify-content: center; align-items: center; gap: 0;
+        button {
+            padding: 1dvh 5dvh;
+            color: var(--Bright); font-family: inherit; font-size: 1.15rem;
+
+            border: none; background: var(--White);
+            border-radius: 3dvh; corner-shape: bevel;
+            border: 1px solid var(--Bright);
+        }
+    } 
+    > div:last-of-type::before, div:last-of-type::after {
+        content: "";
+        display: inline-block;
+        width: 1.5dvh; height: 1.5dvh;
+        
+        background: var(--White); rotate: 45deg; border: 1px solid var(--Bright);
+        vertical-align: middle;
+    }
+}
